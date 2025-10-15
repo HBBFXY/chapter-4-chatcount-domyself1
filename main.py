@@ -1,24 +1,27 @@
-input_str = input()
+# main.py
+def main():
+    s = input()
 
-# 初始化四类字符的计数器
-letter_count = 0  # 英文字符（字母，含Unicode字母）
-digit_count = 0   # 数字字符
-space_count = 0   # 空格字符
-other_count = 0   # 其他字符
+    letters = 0
+    digits = 0
+    spaces = 0
+    others = 0
 
-# 遍历每个字符并分类统计
-for char in input_str:
-    if char.isalpha():
-        letter_count += 1
-    elif char.isdigit():
-        digit_count += 1
-    elif char.isspace():
-        space_count += 1
-    else:
-        other_count += 1
+    for ch in s:
+        if ('A' <= ch <= 'Z') or ('a' <= ch <= 'z'):
+            letters += 1
+        elif '0' <= ch <= '9':
+            digits += 1
+        elif ch == ' ':
+            spaces += 1
+        else:
+            others += 1
 
-# 严格按格式输出（英文冒号+空格，键名准确）
-print(f"英文字符: {letter_count}")
-print(f"数字: {digit_count}")
-print(f"空格: {space_count}")
-print(f"其他字符: {other_count}")
+    print(f"英文字符: {letters}")
+    print(f"数字: {digits}")
+    print(f"空格: {spaces}")
+    print(f"其他字符: {others}")
+
+
+if __name__ == "__main__":
+    main()

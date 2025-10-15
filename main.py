@@ -1,25 +1,22 @@
-# 从键盘接收一行输入
-input_str = input()
+# main.py
+s = input()
 
-# 初始化计数器
 letter_count = 0
 digit_count = 0
 space_count = 0
 other_count = 0
 
-# 遍历字符串中的每个字符
-for char in input_str:
-    if char.isalpha():  # 判断是否为英文字母
+for ch in s:
+    if ch.isalpha():        # 英文字母
         letter_count += 1
-    elif char.isdigit():  # 判断是否为数字
+    elif ch.isdigit():      # 数字
         digit_count += 1
-    elif char.isspace():  # 判断是否为空格
+    elif ch.isspace():      # 空格
         space_count += 1
-    else:  # 其他字符
+    else:                   # 其他字符
         other_count += 1
 
-# 按照要求的格式输出结果
-print(f"英文字符:{letter_count}")
-print(f"数字:{digit_count}")
-print(f"空格:{space_count}")
-print(f"其他字符:{other_count}")
+print(f"英文字符: {letter_count}")
+print(f"数字: {digit_count}")
+print(f"空格: {space_count}")
+print(f"其他字符: {other_count}")
